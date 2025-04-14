@@ -3,7 +3,7 @@ import { SubmitButton } from "./submit-button";
 
 function NoteCreator() {
     return (
-        <div>
+        <div className="max-w-md mx-auto">
             {/* <h3 className="text-center mb-2">Create a new note</h3> */}
             <form action={insertNewNote} className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 space-y-4">
                 <div>
