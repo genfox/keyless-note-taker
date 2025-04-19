@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@libsql/client": "^0.15.3",
+    "@lit/react": "^1.0.7",
     "dotenv": "^16.5.0",
     "drizzle-kit": "^0.30.6",
     "drizzle-orm": "^0.41.0",
+    "lit": "^3.3.0",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
