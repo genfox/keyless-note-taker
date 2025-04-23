@@ -3,16 +3,17 @@
 import { getUser } from "@/authentication";
 import { notesTable } from "./schema";
 import { db } from ".";
-import { desc, eq } from "drizzle-orm";
+import { asc, desc, eq } from "drizzle-orm";
 
 export type Note = typeof notesTable.$inferInsert;
 
-export async function getUserNotes() : Promise<Note[]> {
+export async function getUserNotes(sortBy: keyof Note = "lastUpdate", sortOrder: "DESC" | "ASC") : Promise<Note[]> {
+    const sortFunction = sortOrder === "ASC" ? asc : desc;
     const loggedUser = getUser();
     const notes = await db.select()
         .from(notesTable)
         .where(eq(notesTable.userId, loggedUser.id))
-        .orderBy(desc(notesTable.lastUpdate));
+        .orderBy(sortFunction(notesTable[sortBy]));
 
     return notes;
 };
