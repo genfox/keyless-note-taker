@@ -138,7 +138,7 @@ export class NoteCard extends LitElement {
 
     static properties = {
         noteId: { type: Number },
-        name: { type: String },
+        title: { type: String },
         content: { type: String },
         lastUpdate: { type: String },
         onDeleteNote: { type: Function },
