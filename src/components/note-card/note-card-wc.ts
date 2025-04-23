@@ -125,6 +125,35 @@ export class NoteCard extends LitElement {
             }
         }
     }
+    @media (prefers-color-scheme: light) {
+        .article-content {
+            background-color: #ffffff;
+            border: none;
+            -webkit-box-shadow: 4px 4px 10px 1px rgba(186,186,186,0.7); 
+            box-shadow: 4px 4px 10px 1px rgba(186,186,186,0.7);
+            .note-title {
+                color: #364153;
+            }
+            .note-content {
+                color: #6a7282
+            }
+            .last-update-container {
+                color: #6d6d6d;
+            }
+            .icon-button {
+                color: #6a7282;
+                &.edit {
+                    &:hover {
+                        color: orange
+                    }
+                }
+            }
+            .text-input {
+                background-color: #ffffff;
+                color: #364153;
+            }
+        }
+    }
     `;
 
     declare noteId: number;
@@ -224,7 +253,7 @@ export class NoteCard extends LitElement {
         }
 
         return html`
-    <!-- <article className="dark:border-gray-700  bg-white dark:bg-gray-800"> -->
+    <!-- <article className="dark:border-gray-500  bg-white dark:bg-gray-800"> -->
     <article class="article-content">
       <div class="main-content">
         <div class="title-container">
