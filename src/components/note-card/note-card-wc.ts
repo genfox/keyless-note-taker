@@ -86,12 +86,12 @@ export class NoteCard extends LitElement {
         gap: 12px;
         .text-input {
             width: 100%;
-            /* padding-inline: .75rem; */
             padding-block: .5rem;
             background-color: #364153;
             border: 1px solid #4a5565;
             color: white;
             border-radius: .375rem;
+            font-family: sans-serif;
             &::placeholder {
                 color: #99a1af;
             }
